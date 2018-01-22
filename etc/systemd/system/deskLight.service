@@ -1,0 +1,12 @@
+[Unit]
+Description=For turning the desk light off and on
+After=network.target
+
+[Service]
+ExecStart=/home/pi/deskLight/deskLight.sh
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
